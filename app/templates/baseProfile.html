@@ -1,0 +1,28 @@
+<div class="card profile-card">
+	<span class="profile-pic-container">
+		<div class="profile-pic">
+			<img [alt]="name" [src]="picture" class="media-object img-circle center-block"/>
+		</div>
+		<div class="name-and-profession text-center">
+			<h3>
+				<b>{{name}}</b>
+			</h3>
+			<h5 class="text-muted">{{label}}</h5>
+		</div>
+	</span>
+    <hr/>
+    <div class="contact-details clearfix">
+        <div class="detail"><span class="icon"><i class="icon fs-lg icon-location"></i></span><span class="info">{{location.Address}}, {{location.city}}</span></div>
+        <div class="detail"><span class="icon"><i class="icon fs-lg icon-phone"></i></span><span itemprop="telephone" class="info">{{phone}}</span></div>
+        <div class="detail"><span class="icon"><i class="icon fs-lg icon-mail"></i></span><span class="info"><a href="mailto:{{email}}" class="link-disguise">{{email}}</a></span></div>
+        <div class="detail"><span title="»y¨¥" class="icon"><i class="icon fs-lg icon-language"></i></span><span class="info">¤¤¤å, ­^¤å</span></div>
+    </div>
+    <hr/>
+    <div class="social-links text-center">
+        <div>
+            <a href="https://www.facebook.com/XuPeiYao" target="_blank" data-toggle="tooltip" title="®}°ö³ó on Facebook" class="fs-2x social-link link-facebook icon-facebook"></a>
+            <a href="https://www.linkedin.com/in/xupeiyao" target="_blank" data-toggle="tooltip" title="®}°ö³ó on LinkedIn" class="fs-2x social-link link-linkedin icon-linkedin"></a>
+            <a href="https://github.com/XuPeiYao" target="_blank" data-toggle="tooltip" title="®}°ö³ó on GitHub" class="fs-2x social-link link-github icon-github"></a>
+        </div>
+    </div>
+</div>
