@@ -10,17 +10,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const core_1 = require('@angular/core');
 const http_1 = require('@angular/http');
-const app_components_toggle_1 = require('./app.components.toggle');
+const app_section_1 = require('./app.section');
 let MainComponent = class MainComponent {
     constructor(http) {
-        this.toggleItems = [
-            new app_components_toggle_1.ToggleItem("簡介", "icon-board", "#about"),
-            new app_components_toggle_1.ToggleItem("工作經歷", "icon-office", "#work-experience"),
-            new app_components_toggle_1.ToggleItem("技能", "icon-tools", "#skills"),
-            new app_components_toggle_1.ToggleItem("學歷", "icon-graduation-cap", "#education"),
-            new app_components_toggle_1.ToggleItem("獎項", "icon-trophy", "#awards"),
-            new app_components_toggle_1.ToggleItem("作品", "icon-newspaper", "#publications"),
-            new app_components_toggle_1.ToggleItem("興趣", "icon-heart", "#interests")
+        this.sections = [
+            new app_section_1.Section("about", "簡介", "icon-board"),
+            new app_section_1.Section("work-experience", "工作經歷", "icon-office"),
+            new app_section_1.Section("skills", "技能", "icon-tools"),
+            new app_section_1.Section("education", "學歷", "icon-graduation-cap"),
+            new app_section_1.Section("awards", "獎項", "icon-trophy"),
+            new app_section_1.Section("publications", "作品", "icon-newspaper"),
+            new app_section_1.Section("interests", "興趣", "icon-heart")
         ];
         //獲取履歷JSON
         http.get('assets/resume.json').subscribe(x => {

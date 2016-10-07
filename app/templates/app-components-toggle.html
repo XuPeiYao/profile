@@ -1,13 +1,6 @@
 <a href="#" class="js-floating-nav-trigger floating-nav-trigger"><i class="icon-bars"></i><span class="close-icon">&times;</span></a>
 <nav class="floating-nav js-floating-nav">
     <ul class="list-unstyled">
-        <li *ngFor="let item of items" ><a href="{{item.tag}}"><i class="mr-10 {{item.icon}}"></i>{{item.text}}</a></li>
-        <!--<li><a href="#about"><i class="mr-10 icon-board"></i>簡介</a></li>
-        <li><a href="#work-experience"><i class="mr-10 icon-office"></i>工作經歷</a></li>
-        <li><a href="#skills"><i class="mr-10 icon-tools"></i>技能</a></li>
-        <li><a href="#education"><i class="mr-10 icon-graduation-cap"></i>教育</a></li>
-        <li><a href="#awards"><i class="mr-10 icon-trophy"></i>獎項</a></li>
-        <li><a href="#publications"><i class="mr-10 icon-newspaper"></i>作品</a></li>
-        <li><a href="#interests"><i class="mr-10 icon-heart"></i>興趣</a></li>-->
+        <li *ngFor="let item of items" ><a href="#{{item.id}}"><i class="mr-10 {{item.icon}}"></i>{{item.title}}</a></li>
     </ul>
 </nav>

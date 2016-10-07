@@ -26,12 +26,4 @@ ToggleComponent = __decorate([
     __metadata('design:paramtypes', [])
 ], ToggleComponent);
 exports.ToggleComponent = ToggleComponent;
-class ToggleItem {
-    constructor(text, icon, tag) {
-        this.text = text;
-        this.icon = icon;
-        this.tag = tag;
-    }
-}
-exports.ToggleItem = ToggleItem;
 //# sourceMappingURL=app.components.toggle.js.map

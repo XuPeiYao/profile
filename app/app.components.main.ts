@@ -1,7 +1,7 @@
 declare var webFontInit:Function;
 import { Component, AfterContentInit } from '@angular/core';
 import { Http } from '@angular/http';
-import {ToggleItem }from './app.components.toggle'
+import { Section }from './app.section'
 
 @Component({
   selector: 'app-components-main',
@@ -13,14 +13,14 @@ export class MainComponent implements AfterContentInit {
    */
   public resume: any; 
 
-  public toggleItems : ToggleItem[] =[
-      new ToggleItem("簡介","icon-board","#about"),
-      new ToggleItem("工作經歷","icon-office","#work-experience"),
-      new ToggleItem("技能","icon-tools","#skills"),
-      new ToggleItem("學歷","icon-graduation-cap","#education"),
-      new ToggleItem("獎項","icon-trophy","#awards"),
-      new ToggleItem("作品","icon-newspaper","#publications"),
-      new ToggleItem("興趣","icon-heart","#interests")
+  public sections : Section[] =[
+      new Section("about","簡介","icon-board"),
+      new Section("work-experience","工作經歷","icon-office"),
+      new Section("skills","技能","icon-tools"),
+      new Section("education","學歷","icon-graduation-cap"),
+      new Section("awards","獎項","icon-trophy"),
+      new Section("publications","作品","icon-newspaper"),
+      new Section("interests","興趣","icon-heart")
   ];
 
   constructor(http : Http){

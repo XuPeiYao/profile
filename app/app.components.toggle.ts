@@ -1,4 +1,5 @@
 declare var toggleInit : Function;
+import { Section } from "./app.section";
 import { Component, Input, AfterContentInit } from '@angular/core';
 @Component({
     selector: 'app-components-toggle',
@@ -6,16 +7,9 @@ import { Component, Input, AfterContentInit } from '@angular/core';
 })
 export class ToggleComponent implements AfterContentInit {
     @Input()
-    public items: ToggleItem[];
+    public items: Section[];
 
     public ngAfterContentInit(): void {
         toggleInit();
     }
-}
-
-export class ToggleItem{
-    constructor(
-        public text:string,
-        public icon:string,
-        public tag:string){}
 }
