@@ -51,11 +51,12 @@
                         </div>
                     </div>
                     <hr/>
-                    <div class="social-links text-center">
+                    <div class="social-links text-center" *ngIf="resume?.basics?.profiles">
                         <div>
-                            <a href="https://www.facebook.com/XuPeiYao" target="_blank" data-toggle="tooltip" title="{{resume?.basics?.name}} on Facebook" class="fs-2x social-link link-facebook icon-facebook"></a>
-                            <a href="https://www.linkedin.com/in/xupeiyao" target="_blank" data-toggle="tooltip" title="{{resume?.basics?.name}} on LinkedIn" class="fs-2x social-link link-linkedin icon-linkedin"></a>
-                            <a href="https://github.com/XuPeiYao" target="_blank" data-toggle="tooltip" title="{{resume?.basics?.name}} on GitHub" class="fs-2x social-link link-github icon-github"></a>
+                            <a *ngFor="let item of resume?.basics?.profiles" 
+                            [href]="item.url" target="_blank" data-toggle="tooltip"
+                             title="{{resume?.basics?.name}} on {{item.network}}"
+                              class="fs-2x social-link link-{{item.network.toLowerCase()}} icon-{{item.network.toLowerCase()}}"></a>
                         </div>
                     </div>
                 </div>
