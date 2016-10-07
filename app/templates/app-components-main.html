@@ -1,17 +1,4 @@
-﻿<!DOCTYPE html>
-<html lang="zh-tw">
-
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="assets/style.css" />
-</head>
-
-<body>
-    <div class="container-fluid">
+<div class="container-fluid">
         <div class="row main clearfix">
 			<a href="#" class="js-floating-nav-trigger floating-nav-trigger"><i class="icon-bars"></i><span class="close-icon">&times;</span></a>
             <nav class="floating-nav js-floating-nav">
@@ -26,20 +13,49 @@
                 </ul>
             </nav>
             <section class="col-md-3 card-wrapper profile-card-wrapper affix">
-                <div class="card profile-card"><span class="profile-pic-container"><div class="profile-pic"><img data-src="holder.js/100x100" alt="徐培堯" src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-1/p160x160/10606141_1260981153919422_3055432931391958729_n.jpg?oh=2242f4b905c0fccc0bc4b3ebdfed0384&amp;oe=58677633" itemprop="image" class="media-object img-circle center-block"/></div><div class="name-and-profession text-center"><h3 itemprop="name"><b>徐培堯</b></h3><h5 itemprop="jobTitle" class="text-muted">Programmer</h5></div></span>
+                <div class="card profile-card">
+                    <span class="profile-pic-container">
+                        <div class="profile-pic">
+                            <img data-src="holder.js/100x100" 
+                            [alt]="resume?.basics?.name"
+                            [src]="resume?.basics?.picture" class="media-object img-circle center-block"/>
+                        </div>
+                        <div class="name-and-profession text-center">
+                            <h3>
+                                <b>{{resume?.basics?.name}}</b>
+                            </h3>
+                            <h5 class="text-muted">
+                                {{resume?.basics?.label}}
+                            </h5>
+                        </div>
+                    </span>
                     <hr/>
                     <div class="contact-details clearfix">
-                        <div class="detail"><span class="icon"><i class="icon fs-lg icon-location"></i></span><span class="info">台南市, 台灣</span></div>
-                        <div class="detail"><span class="icon"><i class="icon fs-lg icon-phone"></i></span><span itemprop="telephone" class="info">****-***-***</span></div>
-                        <div class="detail"><span class="icon"><i class="icon fs-lg icon-mail"></i></span><span class="info"><a href="mailto:st89382000@gmail.com" itemprop="email" class="link-disguise">st89382000@gmail.com</a></span></div>
-                        <div class="detail"><span title="Languages I speak" class="icon"><i class="icon fs-lg icon-language"></i></span><span class="info">中文, 英文</span></div>
+                        <div class="detail" *ngIf="locationString">
+                            <span class="icon"><i class="icon fs-lg icon-location"></i></span>
+                            <span class="info">{{locationString}}</span>
+                        </div>
+                        <div class="detail" *ngIf="resume?.basics?.phone">
+                            <span class="icon"><i class="icon fs-lg icon-phone"></i></span>
+                            <span class="info">{{resume?.basics?.phone}}</span>
+                        </div>
+                        <div class="detail" *ngIf="resume?.basics?.email">
+                            <span class="icon"><i class="icon fs-lg icon-mail"></i></span>
+                            <span class="info"><a href="mailto:{{resume?.basics?.email}}" class="link-disguise">{{resume?.basics?.email}}</a></span>
+                        </div>
+                        <div class="detail" *ngIf="languagesString">
+                            <span title="Languages I speak" class="icon"><i class="icon fs-lg icon-language"></i></span>
+                            <span class="info">
+                                {{languagesString}}
+                            </span>
+                        </div>
                     </div>
                     <hr/>
                     <div class="social-links text-center">
                         <div>
-                            <a href="https://www.facebook.com/XuPeiYao" target="_blank" data-toggle="tooltip" title="徐培堯 on Facebook" class="fs-2x social-link link-facebook icon-facebook"></a>
-                            <a href="https://www.linkedin.com/in/xupeiyao" target="_blank" data-toggle="tooltip" title="徐培堯 on LinkedIn" class="fs-2x social-link link-linkedin icon-linkedin"></a>
-                            <a href="https://github.com/XuPeiYao" target="_blank" data-toggle="tooltip" title="徐培堯 on GitHub" class="fs-2x social-link link-github icon-github"></a>
+                            <a href="https://www.facebook.com/XuPeiYao" target="_blank" data-toggle="tooltip" title="{{resume?.basics?.name}} on Facebook" class="fs-2x social-link link-facebook icon-facebook"></a>
+                            <a href="https://www.linkedin.com/in/xupeiyao" target="_blank" data-toggle="tooltip" title="{{resume?.basics?.name}} on LinkedIn" class="fs-2x social-link link-linkedin icon-linkedin"></a>
+                            <a href="https://github.com/XuPeiYao" target="_blank" data-toggle="tooltip" title="{{resume?.basics?.name}} on GitHub" class="fs-2x social-link link-github icon-github"></a>
                         </div>
                     </div>
                 </div>
@@ -280,10 +296,3 @@
             </section>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="assets/toggle.js"></script>
-    <script src="assets/webFont.js"></script>
-</body>
-
-</html>
