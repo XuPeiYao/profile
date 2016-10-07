@@ -35,6 +35,7 @@ export class MainComponent implements AfterContentInit {
     //獲取履歷JSON
     http.get('assets/resume.json').subscribe(x=>{
       this.resume = x.json();
+      document.title = this.resume.basics.name;
       this.sections.forEach(item=>{
         var contentPath = [item.id];
         if(this.sectionMapping[item.id]){
