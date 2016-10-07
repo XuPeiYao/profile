@@ -1,4 +1,4 @@
-<div id="{{content?.id}}" class="detail">
+<div id="{{content?.id}}" *ngIf="content?.content?.length" class="detail">
     <div class="icon"><i class="fs-lg {{content?.icon}}"></i><span class="mobile-title">{{content?.title}}</span></div>
     <div class="info">
         <h4 class="title text-uppercase">{{content?.title}}</h4>
@@ -22,8 +22,8 @@
                     <div class="mop-wrapper space-bottom">
                         <p>{{item?.summary}}</p>
                     </div>
-                    <ul *ngIf="item.highlights" >
-                        <li *ngFor="let item2 of item.highlights"  class="mop-wrapper">
+                    <ul *ngIf="item.highlights">
+                        <li *ngFor="let item2 of item.highlights" class="mop-wrapper">
                             <p>{{item2}}</p>
                         </li>
                     </ul>
@@ -71,6 +71,25 @@
                 </li>
             </ul>
         </div>
+        <div *ngIf="content?.id=='volunteer-work'" class="content">
+            <ul class="list-unstyled clear-margin">
+                <li *ngFor="let item of content?.content"  class="card card-nested">
+                    <div class="content">
+                        <p class="clear-margin relative"><strong>{{item.position}}, </strong>
+                        <a [href]="item.website" target="_blank">{{item.organization}}</a></p>
+                        <p class="text-muted"><small>{{item.startDate}} - {{item.endDate}}</small></p>
+                        <div class="mop-wrapper">
+                            <p>{{item.summary}}</p>
+                        </div>
+                        <ul>
+                            <li *ngFor="let item2 of item.highlights"  class="mop-wrapper">
+                                <p>{{item2}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
         <div *ngIf="content?.id=='publications'" class="content">
             <ul class="list-unstyled clear-margin">
                 <li class="card card-nested" *ngFor="let item of content?.content">
@@ -93,6 +112,17 @@
                     <div class="space-top labels">
                         <span *ngFor="let item2 of item.keywords" class="label label-keyword">{{item2}}</span>
                     </div>
+                </li>
+            </ul>
+        </div>
+        <div *ngIf="content?.id=='references'" class="content">
+            <ul class="list-unstyled clear-margin">
+                <li *ngFor="let item of content?.content" class="card card-nested">{{item.name}}
+                    <blockquote class="quote">
+                        <div class="mop-wrapper">
+                            <p>{{item.reference}}</p>
+                        </div>
+                    </blockquote>
                 </li>
             </ul>
         </div>

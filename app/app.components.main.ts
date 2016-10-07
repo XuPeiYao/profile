@@ -19,13 +19,16 @@ export class MainComponent implements AfterContentInit {
       new Section("skills","技能","icon-tools"),
       new Section("education","學歷","icon-graduation-cap"),
       new Section("awards","獎項","icon-trophy"),
+      new Section("volunteer-work","志工","icon-child"),
       new Section("publications","作品","icon-newspaper"),
-      new Section("interests","興趣","icon-heart")
+      new Section("interests","興趣","icon-heart"),
+      new Section("references","推薦","icon-thumbs-up")
   ];
 
   private sectionMapping = {
     "about":["basics","summary"],
-    "work-experience":["work"]
+    "work-experience":["work"],
+    "volunteer-work":["volunteer"]
   }
 
   constructor(http : Http){

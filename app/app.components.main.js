@@ -19,12 +19,15 @@ let MainComponent = class MainComponent {
             new app_section_1.Section("skills", "技能", "icon-tools"),
             new app_section_1.Section("education", "學歷", "icon-graduation-cap"),
             new app_section_1.Section("awards", "獎項", "icon-trophy"),
+            new app_section_1.Section("volunteer-work", "志工", "icon-child"),
             new app_section_1.Section("publications", "作品", "icon-newspaper"),
-            new app_section_1.Section("interests", "興趣", "icon-heart")
+            new app_section_1.Section("interests", "興趣", "icon-heart"),
+            new app_section_1.Section("references", "推薦", "icon-thumbs-up")
         ];
         this.sectionMapping = {
             "about": ["basics", "summary"],
-            "work-experience": ["work"]
+            "work-experience": ["work"],
+            "volunteer-work": ["volunteer"]
         };
         //獲取履歷JSON
         http.get('assets/resume.json').subscribe(x => {
