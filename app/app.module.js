@@ -12,6 +12,8 @@ const core_1 = require('@angular/core');
 const platform_browser_1 = require('@angular/platform-browser');
 const app_components_main_1 = require('./app.components.main');
 const app_components_basicDataPanel_1 = require('./app.components.basicDataPanel');
+const app_components_background_1 = require('./app.components.background');
+const app_components_toggle_1 = require('./app.components.toggle');
 const http_1 = require('@angular/http');
 let AppModule = class AppModule {
 };
@@ -21,7 +23,7 @@ AppModule = __decorate([
             platform_browser_1.BrowserModule,
             http_1.HttpModule
         ],
-        declarations: [app_components_main_1.MainComponent, app_components_basicDataPanel_1.BasicDataPanelComponent],
+        declarations: [app_components_main_1.MainComponent, app_components_basicDataPanel_1.BasicDataPanelComponent, app_components_background_1.BackgroundComponent, app_components_toggle_1.ToggleComponent],
         bootstrap: [app_components_main_1.MainComponent]
     }), 
     __metadata('design:paramtypes', [])

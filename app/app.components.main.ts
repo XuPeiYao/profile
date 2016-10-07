@@ -1,6 +1,8 @@
-declare var toggleInit : Function, webFontInit:Function;
+declare var webFontInit:Function;
 import { Component, AfterContentInit } from '@angular/core';
 import { Http } from '@angular/http';
+import {ToggleItem }from './app.components.toggle'
+
 @Component({
   selector: 'app-components-main',
   templateUrl: 'app/templates/app-components-main.html'
@@ -11,31 +13,15 @@ export class MainComponent implements AfterContentInit {
    */
   public resume: any; 
 
-  /**
-   * 取得地址資訊字串表示 
-   */
-  public get locationString():string{
-    if(!this.resume)return null;
-    function checkAndPush(ary:Array<string>,value:string){
-      if(value != null && value.length > 0)ary.push(value);
-    }
-    var result = [];
-    var location = this.resume.basics.location;
-    checkAndPush(result,location.address);
-    checkAndPush(result,location.city);
-    checkAndPush(result,location.countryCode);
-    checkAndPush(result,location.postalCode);
-    checkAndPush(result,location.region);
-    return result.join(", ");
-  }
-
-  /**
-   * 取得使用者語言字串表示
-   */
-  public get languagesString():string{
-    if(!this.resume)return null;
-    return this.resume.languages.map(x=>x.language).join(", ");
-  }
+  public toggleItems : ToggleItem[] =[
+      new ToggleItem("簡介","icon-board","#about"),
+      new ToggleItem("工作經歷","icon-office","#work-experience"),
+      new ToggleItem("技能","icon-tools","#skills"),
+      new ToggleItem("學歷","icon-graduation-cap","#education"),
+      new ToggleItem("獎項","icon-trophy","#awards"),
+      new ToggleItem("作品","icon-newspaper","#publications"),
+      new ToggleItem("興趣","icon-heart","#interests")
+  ];
 
   constructor(http : Http){
     //獲取履歷JSON
@@ -45,7 +31,6 @@ export class MainComponent implements AfterContentInit {
   }
 
   public ngAfterContentInit() : void{
-    toggleInit();
     webFontInit();
   }
 }

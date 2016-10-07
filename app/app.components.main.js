@@ -10,42 +10,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const core_1 = require('@angular/core');
 const http_1 = require('@angular/http');
+const app_components_toggle_1 = require('./app.components.toggle');
 let MainComponent = class MainComponent {
     constructor(http) {
+        this.toggleItems = [
+            new app_components_toggle_1.ToggleItem("簡介", "icon-board", "#about"),
+            new app_components_toggle_1.ToggleItem("工作經歷", "icon-office", "#work-experience"),
+            new app_components_toggle_1.ToggleItem("技能", "icon-tools", "#skills"),
+            new app_components_toggle_1.ToggleItem("學歷", "icon-graduation-cap", "#education"),
+            new app_components_toggle_1.ToggleItem("獎項", "icon-trophy", "#awards"),
+            new app_components_toggle_1.ToggleItem("作品", "icon-newspaper", "#publications"),
+            new app_components_toggle_1.ToggleItem("興趣", "icon-heart", "#interests")
+        ];
         //獲取履歷JSON
         http.get('assets/resume.json').subscribe(x => {
             this.resume = x.json();
         });
     }
-    /**
-     * 取得地址資訊字串表示
-     */
-    get locationString() {
-        if (!this.resume)
-            return null;
-        function checkAndPush(ary, value) {
-            if (value != null && value.length > 0)
-                ary.push(value);
-        }
-        var result = [];
-        var location = this.resume.basics.location;
-        checkAndPush(result, location.address);
-        checkAndPush(result, location.city);
-        checkAndPush(result, location.countryCode);
-        checkAndPush(result, location.postalCode);
-        checkAndPush(result, location.region);
-        return result.join(", ");
-    }
-    /**
-     * 取得使用者語言字串表示
-     */
-    get languagesString() {
-        if (!this.resume)
-            return null;
-        return this.resume.languages.map(x => x.language).join(", ");
-    }
     ngAfterContentInit() {
-        toggleInit();
         webFontInit();
     }
 };
