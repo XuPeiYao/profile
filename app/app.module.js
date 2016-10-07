@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 const core_1 = require('@angular/core');
 const platform_browser_1 = require('@angular/platform-browser');
 const app_components_main_1 = require('./app.components.main');
+const app_components_basicDataPanel_1 = require('./app.components.basicDataPanel');
 const http_1 = require('@angular/http');
 let AppModule = class AppModule {
 };
@@ -20,7 +21,7 @@ AppModule = __decorate([
             platform_browser_1.BrowserModule,
             http_1.HttpModule
         ],
-        declarations: [app_components_main_1.MainComponent],
+        declarations: [app_components_main_1.MainComponent, app_components_basicDataPanel_1.BasicDataPanelComponent],
         bootstrap: [app_components_main_1.MainComponent]
     }), 
     __metadata('design:paramtypes', [])
