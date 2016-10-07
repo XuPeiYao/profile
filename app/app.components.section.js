@@ -9,25 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-let BackgroundComponent = class BackgroundComponent {
-    constructor() {
-        this.title = "Background";
-    }
+let SectionComponent = class SectionComponent {
 };
 __decorate([
     core_1.Input(), 
-    __metadata('design:type', Array)
-], BackgroundComponent.prototype, "sections", void 0);
-__decorate([
-    core_1.Input(), 
-    __metadata('design:type', String)
-], BackgroundComponent.prototype, "title", void 0);
-BackgroundComponent = __decorate([
+    __metadata('design:type', Object)
+], SectionComponent.prototype, "content", void 0);
+SectionComponent = __decorate([
     core_1.Component({
-        selector: 'app-components-background',
-        templateUrl: 'app/templates/app-components-background.html'
+        selector: 'app-components-section',
+        templateUrl: 'app/templates/app-components-section.html'
     }), 
     __metadata('design:paramtypes', [])
-], BackgroundComponent);
-exports.BackgroundComponent = BackgroundComponent;
-//# sourceMappingURL=app.components.background.js.map
+], SectionComponent);
+exports.SectionComponent = SectionComponent;
+//# sourceMappingURL=app.components.section.js.map

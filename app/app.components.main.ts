@@ -23,11 +23,31 @@ export class MainComponent implements AfterContentInit {
       new Section("interests","興趣","icon-heart")
   ];
 
+  private sectionMapping = {
+    "about":["basics","summary"],
+    "work-experience":["work"]
+  }
+
   constructor(http : Http){
     //獲取履歷JSON
     http.get('assets/resume.json').subscribe(x=>{
       this.resume = x.json();
+      this.sections.forEach(item=>{
+        var contentPath = [item.id];
+        if(this.sectionMapping[item.id]){
+          contentPath = this.sectionMapping[item.id];
+        }
+        item.content = this.getProperty(this.resume,contentPath);
+      });
     });
+  }
+
+  public getProperty(obj: any,path:string[]):any{
+    var result = obj;
+    for(var i = 0 ; i < path.length ; i++){
+      result = result[path[i]];
+    }
+    return result;
   }
 
   public ngAfterContentInit() : void{

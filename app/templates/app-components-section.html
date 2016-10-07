@@ -1,0 +1,100 @@
+<div id="{{content?.id}}" class="detail">
+    <div class="icon"><i class="fs-lg {{content?.icon}}"></i><span class="mobile-title">{{content?.title}}</span></div>
+    <div class="info">
+        <h4 class="title text-uppercase">{{content?.title}}</h4>
+        <div *ngIf="content?.id=='about'" class="card card-nested">
+            <div class="content mop-wrapper">
+                {{content?.content}}
+            </div>
+        </div>
+        <ul *ngIf="content?.id=='work-experience'" class="list-unstyled clear-margin">
+            <li *ngFor="let item of content?.content" class="card card-nested clearfix">
+                <div class="content">
+                    <p class="clear-margin relative">
+                        <strong>{{item?.position}}</strong>,
+                        <a href="{{item.website}}" target="_blank">{{item?.company}}</a>
+                    </p>
+                    <p class="text-muted">
+                        <small>
+                            <span class="space-right">{{item?.startDate}} - {{item?.endDate}}</span>
+                        </small>
+                    </p>
+                    <div class="mop-wrapper space-bottom">
+                        <p>{{item?.summary}}</p>
+                    </div>
+                    <ul *ngIf="item.highlights" >
+                        <li *ngFor="let item2 of item.highlights"  class="mop-wrapper">
+                            <p>{{item2}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <div *ngIf="content?.id=='skills'" class="content">
+            <ul class="list-unstyled clear-margin">
+                <li *ngFor="let item of content?.content" class="card card-nested card-skills">
+                    <div data-toggle="tooltip" [title]="item.level" data-placement="left" class="skill-level">
+                        <div class="skill-progress {{item.level.toLowerCase()}}"></div>
+                    </div>
+                    <div class="skill-info"><strong>{{item.name}}</strong>
+                        <div class="space-top labels">
+                            <span *ngFor="let item2 of item.keywords" class="label label-keyword">{{item2}}</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div *ngIf="content?.id=='education'" class="content">
+            <ul class="list-unstyled clear-margin">
+                <li class="card card-nested" *ngFor="let item of content?.content">
+                    <div class="content">
+                        <p class="clear-margin relative"><strong>{{item.area}}, {{item.studyType}},&nbsp;</strong>{{item.institution}}</p>
+                        <p class="text-muted"><small>{{item.studyType}} - {{item.endDate}}</small></p>
+                        <i>{{item.gpa}}</i>
+                        <div class="space-top labels" *ngIf="item.courses">
+                            <span *ngFor="let item2 of item.courses" class="label label-keyword">{{item2}}</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div *ngIf="content?.id=='awards'" class="content">
+            <ul class="list-unstyled clear-margin">
+                <li *ngFor="let item of content?.content" class="card card-nested">
+                    <div class="content">
+                        <p itemprop="award" class="clear-margin"><strong>{{item.title}} </strong>{{item.awarder}}</p>
+                        <p class="text-muted"><small>獲獎日: {{item.date}}</small></p>
+                        <div class="mop-wrapper">
+                            <p>{{item.summary}}</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div *ngIf="content?.id=='publications'" class="content">
+            <ul class="list-unstyled clear-margin">
+                <li class="card card-nested" *ngFor="let item of content?.content">
+                    <div class="content">
+                        <p class="clear-margin">
+                            <strong><a href="{{item.website}}" target="_blank">{{item.name}}</a>, {{item.publisher}}</strong>
+                        </p>
+                        <p class="text-muted"><small>發行日: {{item.releaseDate}}</small></p>
+                        <div class="mop-wrapper">
+                            <p>{{item.summary}}</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div *ngIf="content?.id=='interests'" class="content">
+            <ul class="list-unstyled clear-margin">
+                <li *ngFor="let item of content?.content" class="card card-nested">
+                    <p><strong>{{item.name}}</strong></p>
+                    <div class="space-top labels">
+                        <span *ngFor="let item2 of item.keywords" class="label label-keyword">{{item2}}</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

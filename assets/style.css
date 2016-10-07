@@ -230,6 +230,7 @@
   padding: 5px;
   border: 1px solid #357ebd;
   margin-right: 5px;
+  margin-bottom: 2px;
 }
 .label-keyword:last-child {
   margin-right: 0;

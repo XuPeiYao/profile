@@ -1,3 +1,4 @@
+import { Section } from './app.section';
 import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-components-background',
@@ -5,7 +6,7 @@ import { Component, Input } from '@angular/core';
 })
 export class BackgroundComponent {
   @Input()
-  public resume:any;
+  public sections:Section[];
 
   @Input()
   public title:string = "Background";

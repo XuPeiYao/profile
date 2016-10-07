@@ -22,10 +22,28 @@ let MainComponent = class MainComponent {
             new app_section_1.Section("publications", "作品", "icon-newspaper"),
             new app_section_1.Section("interests", "興趣", "icon-heart")
         ];
+        this.sectionMapping = {
+            "about": ["basics", "summary"],
+            "work-experience": ["work"]
+        };
         //獲取履歷JSON
         http.get('assets/resume.json').subscribe(x => {
             this.resume = x.json();
+            this.sections.forEach(item => {
+                var contentPath = [item.id];
+                if (this.sectionMapping[item.id]) {
+                    contentPath = this.sectionMapping[item.id];
+                }
+                item.content = this.getProperty(this.resume, contentPath);
+            });
         });
+    }
+    getProperty(obj, path) {
+        var result = obj;
+        for (var i = 0; i < path.length; i++) {
+            result = result[path[i]];
+        }
+        return result;
     }
     ngAfterContentInit() {
         webFontInit();
