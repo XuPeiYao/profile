@@ -25,6 +25,16 @@ export class MainComponent implements AfterContentInit {
       new Section("references","推薦","icon-thumbs-up")
   ];
 
+  public get enableSections():Section[]{
+    var result = this.sections.filter(x=>{
+      if(Array.isArray(x.content)){
+        return x.content.length;
+      }else{
+        return x.content != null && x.content.length;
+      }
+    });
+    return result;
+  }
   private sectionMapping = {
     "about":["basics","summary"],
     "work-experience":["work"],

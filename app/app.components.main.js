@@ -42,6 +42,17 @@ let MainComponent = class MainComponent {
             });
         });
     }
+    get enableSections() {
+        var result = this.sections.filter(x => {
+            if (Array.isArray(x.content)) {
+                return x.content.length;
+            }
+            else {
+                return x.content != null && x.content.length;
+            }
+        });
+        return result;
+    }
     getProperty(obj, path) {
         var result = obj;
         for (var i = 0; i < path.length; i++) {
