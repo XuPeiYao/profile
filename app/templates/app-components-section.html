@@ -3,9 +3,7 @@
     <div class="info">
         <h4 class="title text-uppercase">{{content?.title}}</h4>
         <div *ngIf="content?.id=='about'" class="card card-nested">
-            <div class="content mop-wrapper">
-                {{content?.content}}
-            </div>
+            <div class="content mop-wrapper" [innerHtml]="content?.content"></div>
         </div>
         <ul *ngIf="content?.id=='work-experience'" class="list-unstyled clear-margin">
             <li *ngFor="let item of content?.content" class="card card-nested clearfix">
