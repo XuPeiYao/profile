@@ -61,10 +61,19 @@
       "startDate": "2012/09",
       "endDate": "2016/06",
       "gpa": "A",
-      "courses": []
+      "courses": [
+        "JAVA程式設計",
+        "C#程式設計",
+        "網頁程式設計",
+        "資料庫管理",
+        "XML",
+        "UNIX系統",
+        "資訊安全",
+        "人工智慧"
+      ]
     },
     {
-      "institution": "國立曾文家事商業職業學校",
+      "institution": "國立曾文高級家事商業職業學校",
       "area": "資料處理科",
       "studyType": "日間部",
       "startDate": "2009/09",
@@ -162,6 +171,7 @@
         "ASP.net MVC(4 & Core)",
         "Web API",
         "SQL Server",
+        "Mongo DB",
         "T-SQL",
         "LINQ",
         "EntityFramework Core",
