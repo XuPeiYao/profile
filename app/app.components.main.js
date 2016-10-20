@@ -39,15 +39,31 @@ let MainComponent = class MainComponent {
         };
         (() => __awaiter(this, void 0, void 0, function* () {
             this.resume = yield this.downloadJSON(http, 'assets/resume.json');
-            this.resume.publications = (yield this.downloadJSON(http, 'https://api.github.com/users/XuPeiYao/repos'))
+            var publications = [];
+            for (var page = 1;; page++) {
+                var list = yield this.downloadJSON(http, `https://api.github.com/users/XuPeiYao/repos?page=${page}`);
+                for (var i = 0; i < list.length; i++) {
+                    publications.push(list[i]);
+                }
+                if (list.length == 0)
+                    break;
+            }
+            this.resume.publications = publications
                 .filter(x => x.stargazers_count)
                 .map(x => {
                 return {
                     name: x.name,
-                    releaseDate: new Date(x.updated_at),
+                    releaseDate: new Date(x.created_at),
                     website: x.html_url,
                     summary: x.description
                 };
+            })
+                .sort((a, b) => {
+                return b.releaseDate - a.releaseDate;
+            })
+                .map(x => {
+                x.releaseDate = x.releaseDate.format("yyyy/mm/dd");
+                return x;
             });
             document.title = this.resume.basics.name;
             this.sections.forEach(item => {

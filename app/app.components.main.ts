@@ -45,17 +45,32 @@ export class MainComponent implements AfterContentInit {
   constructor(http : Http){
     (async()=>{
       this.resume = await this.downloadJSON(http, 'assets/resume.json');
-      this.resume.publications = (await this.downloadJSON(http,'https://api.github.com/users/XuPeiYao/repos'))
-      .filter(x=>x.stargazers_count)
-      .map(x=>{
-          return {
-            name : x.name,
-            releaseDate : new Date(x.updated_at),
-            website:x.html_url,
-            summary:x.description
-          };
-      });
-      
+      var publications = [];
+      for(var page = 1 ; ;page++){
+        var list = await this.downloadJSON(http,`https://api.github.com/users/XuPeiYao/repos?page=${page}`);
+        for(var i = 0 ; i < list.length ;i++){
+          publications.push(list[i]);
+        }
+        if(list.length == 0)break;
+      }
+
+      this.resume.publications = publications
+        .filter(x=>x.stargazers_count)
+        .map(x=>{
+            return {
+              name : x.name,
+              releaseDate : new Date(x.created_at),
+              website:x.html_url,
+              summary:x.description
+            };
+        })
+        .sort((a:any,b:any)=>{
+          return b.releaseDate - a.releaseDate;
+        })
+        .map(x=>{
+          x.releaseDate =(<any>x.releaseDate).format("yyyy/mm/dd");
+          return x;
+        });      
 
       document.title = this.resume.basics.name;
       this.sections.forEach(item=>{
