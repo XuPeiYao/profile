@@ -8,6 +8,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator.throw(value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments)).next());
+    });
+};
 const core_1 = require('@angular/core');
 const http_1 = require('@angular/http');
 const app_section_1 = require('./app.section');
@@ -29,9 +37,8 @@ let MainComponent = class MainComponent {
             "work-experience": ["work"],
             "volunteer-work": ["volunteer"]
         };
-        //獲取履歷JSON
-        http.get('assets/resume.json').subscribe(x => {
-            this.resume = x.json();
+        (() => __awaiter(this, void 0, void 0, function* () {
+            this.resume = yield this.downloadJSON(http, 'assets/resume.json');
             document.title = this.resume.basics.name;
             this.sections.forEach(item => {
                 var contentPath = [item.id];
@@ -40,7 +47,7 @@ let MainComponent = class MainComponent {
                 }
                 item.content = this.getProperty(this.resume, contentPath);
             });
-        });
+        }))();
     }
     get enableSections() {
         var result = this.sections.filter(x => {
@@ -52,6 +59,13 @@ let MainComponent = class MainComponent {
             }
         });
         return result;
+    }
+    downloadJSON(http, url) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return new Promise((res, rej) => {
+                http.get(url).subscribe(response => res(response.json()));
+            });
+        });
     }
     getProperty(obj, path) {
         var result = obj;
