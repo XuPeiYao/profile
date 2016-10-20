@@ -45,6 +45,18 @@ export class MainComponent implements AfterContentInit {
   constructor(http : Http){
     (async()=>{
       this.resume = await this.downloadJSON(http, 'assets/resume.json');
+      this.resume.publications = (await this.downloadJSON(http,'https://api.github.com/users/XuPeiYao/repos'))
+      .filter(x=>x.stargazers_count)
+      .map(x=>{
+          return {
+            name : x.name,
+            releaseDate : new Date(x.updated_at),
+            website:x.html_url,
+            summary:x.description
+          };
+      });
+      
+
       document.title = this.resume.basics.name;
       this.sections.forEach(item=>{
         var contentPath = [item.id];
@@ -53,6 +65,8 @@ export class MainComponent implements AfterContentInit {
         }
         item.content = this.getProperty(this.resume,contentPath);
       });
+
+      console.log(this.resume);
     })();
   }
 

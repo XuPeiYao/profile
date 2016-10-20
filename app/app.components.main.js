@@ -39,6 +39,16 @@ let MainComponent = class MainComponent {
         };
         (() => __awaiter(this, void 0, void 0, function* () {
             this.resume = yield this.downloadJSON(http, 'assets/resume.json');
+            this.resume.publications = (yield this.downloadJSON(http, 'https://api.github.com/users/XuPeiYao/repos'))
+                .filter(x => x.stargazers_count)
+                .map(x => {
+                return {
+                    name: x.name,
+                    releaseDate: new Date(x.updated_at),
+                    website: x.html_url,
+                    summary: x.description
+                };
+            });
             document.title = this.resume.basics.name;
             this.sections.forEach(item => {
                 var contentPath = [item.id];
@@ -47,6 +57,7 @@ let MainComponent = class MainComponent {
                 }
                 item.content = this.getProperty(this.resume, contentPath);
             });
+            console.log(this.resume);
         }))();
     }
     get enableSections() {
