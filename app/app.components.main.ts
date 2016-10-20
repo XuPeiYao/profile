@@ -1,6 +1,5 @@
 declare var webFontInit:Function;
 import { Component, AfterContentInit } from '@angular/core';
-import {Observable} from 'rxjs/Rx';
 import { Http } from '@angular/http';
 import { Section }from './app.section'
 
