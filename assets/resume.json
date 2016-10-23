@@ -36,7 +36,7 @@
     {
       "company": "國立高雄第一科技大學",
       "position": "創意創新雲端平台",
-      "website": "https://goodidea.nkfust.edu.tw",
+      "website": "http://goodidea.nkfust.edu.tw",
       "startDate": "2015/02",
       "endDate": "2016/07",
       "summary": "依校方需求規劃設計系統並建置、維護",
@@ -126,43 +126,7 @@
       "summary": ""
     }
   ],
-  "publications": [
-    {
-      "name": "SharpDisk",
-      "publisher": "",
-      "releaseDate": "2016/07/26",
-      "website": "https://github.com/XuPeiYao/SharpDisk",
-      "summary": "使用ASP.net Core開發的簡易雲端硬碟服務(僅API)"
-    },
-    {
-      "name": "MediaGetCore",
-      "publisher": "",
-      "releaseDate": "2016/01/21",
-      "website": "https://github.com/XuPeiYao/MediaGetCore",
-      "summary": "提供Youtube、Dailymotion、Xuite影片擷取"
-    },
-    {
-      "name": "ExpressionReflection",
-      "publisher": "",
-      "releaseDate": "2016/10/01",
-      "website": "https://github.com/XuPeiYao/ExpressionReflection",
-      "summary": "透過C#的Expression表示式達成簡易的MemberInfo取得"
-    },
-    {
-      "name": "Goodidea(創意創新雲端平台)",
-      "publisher": "",
-      "releaseDate": "2015/02",
-      "website": "http://goodidea.nkfust.edu.tw/",
-      "summary": "提供學校學生發表個人創意構想，並提供學生間線上討論功能，並提供學校舉辦競賽"
-    },
-    {
-      "name": "CatchYou(專題作品)",
-      "publisher": "",
-      "releaseDate": "2015/12",
-      "website": "https://goo.gl/D4t4O3",
-      "summary": "串聯Facebook與藍芽設備，使用者透過藍芽MAC進行交友配對"
-    }
-  ],
+  "publications": [],
   "skills": [
     {
       "name": "Internet應用程式後端開發",
