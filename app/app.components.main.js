@@ -39,7 +39,7 @@ let MainComponent = class MainComponent {
         };
         (() => __awaiter(this, void 0, void 0, function* () {
             this.resume = yield this.downloadJSON(http, 'assets/resume.json');
-            var publications = this.resume.publications || [];
+            var publications = [];
             for (var page = 1;; page++) {
                 var list = yield this.downloadJSON(http, 'https://api.github.com/users/XuPeiYao/repos?page=' + page);
                 for (var i = 0; i < list.length; i++) {
@@ -48,7 +48,7 @@ let MainComponent = class MainComponent {
                 if (list.length == 0)
                     break;
             }
-            this.resume.publications = publications
+            this.resume.publications =  this.resume.publications.concat(publications
                 .filter(x => x.stargazers_count)
                 .map(x => {
                 return {
@@ -64,7 +64,7 @@ let MainComponent = class MainComponent {
                 .map(x => {
                 x.releaseDate = x.releaseDate.format("yyyy/mm/dd");
                 return x;
-            });
+            }));
             document.title = this.resume.basics.name;
             this.sections.forEach(item => {
                 var contentPath = [item.id];
