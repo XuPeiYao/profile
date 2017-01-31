@@ -44,7 +44,7 @@ export class MainComponent implements AfterContentInit {
   constructor(http : Http){
     (async()=>{
       this.resume = await this.downloadJSON(http, 'assets/resume.json');
-      var publications = [];
+      var publications = this.resume.publications || [];
       for(var page = 1 ; ;page++){
         var list = await this.downloadJSON(http,'https://api.github.com/users/XuPeiYao/repos?page=' + page);
         for(var i = 0 ; i < list.length ;i++){
