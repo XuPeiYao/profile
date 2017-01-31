@@ -129,7 +129,7 @@
   "publications": [
 	{
 		"name": "CatchYou藍芽社群交友應用程式",
-		"releaseDate": "2015-12-14T00:00:00Z",
+		"releaseDate": "2015/12/14",
 		"website": "http://www.mis.nkfust.edu.tw/monograph/upload/doc/1040027.pdf",
 		"summary": "大學專題作品，使用ASP.net Core開發並應用Web API與WebSocket等技術實作"
 	}
