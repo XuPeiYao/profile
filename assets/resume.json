@@ -2,7 +2,7 @@
   "basics": {
     "name": "徐培堯",
     "label": "Programmer",
-    "picture": "https://media.licdn.com/media/AAEAAQAAAAAAAAlNAAAAJDhkMGFjYWZlLTExMTUtNGE1MS1hZDRhLWFlODIzMTRiMGJmNw.jpg",
+    "picture": "http://i.imgur.com/gssYPrW.jpg",
     "email": "st89382000@gmail.com",
     "phone": "",
     "website": "",
@@ -10,7 +10,7 @@
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "台南市",
+      "city": "高雄市",
       "countryCode": "台灣",
       "region": ""
     },
@@ -33,6 +33,15 @@
     ]
   },
   "work": [
+	{
+      "company": "國立高雄第一科技大學, 圖書資訊館, 系統支援組",
+      "position": "專任助理",
+      "website": "",
+      "startDate": "2017/04/24",
+      "endDate": "",
+      "summary": "",
+      "highlights": []
+    },
     {
       "company": "國立高雄第一科技大學",
       "position": "創意創新雲端平台",
