@@ -177,6 +177,14 @@
         "Windows Form",
         "WPF"
       ]
+    },
+    {
+      "name": "IOT應用",
+      "level": "Advanced",
+      "keywords": [
+        "iBeacon",
+        "Raspberry Pi"
+      ]
     }
   ],
   "languages": [
