@@ -39,7 +39,7 @@
       "website": "",
       "startDate": "2017/04/24",
       "endDate": "",
-      "summary": "維護APP，後台管理、問卷系統開發",
+      "summary": "主要負責維護智慧校園App以及後台管理，另負責問卷系統開發與校園SSO(OAuth 2)認證服務開發",
       "highlights": []
     },
     {
@@ -148,14 +148,16 @@
       "name": "Internet應用程式後端開發",
       "level": "Master",
       "keywords": [
-        "ASP.net MVC(4 & Core)",
+        "ASP.net MVC(Core & 4.X)",
         "Web API",
         "SQL Server",
         "Mongo DB",
         "T-SQL",
         "LINQ",
-        "EntityFramework Core",
+        "EntityFramework(Core & 6.X)",
         "Node.js",
+	"OAuth2",
+	"Navicat",
         "資料庫設計",
         "系統分析與設計"
       ]
@@ -164,8 +166,9 @@
       "name": "Internet應用程式前端開發",
       "level": "Advanced",
       "keywords": [
+	"Typescript",
         "Javascript",
-        "Typescript",
+	"Angular2",
         "AngularJS",
         "HTML5"
       ]
