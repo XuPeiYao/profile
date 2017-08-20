@@ -188,11 +188,12 @@
       ]
     },
     {
-      "name": "IOT應用",
+      "name": "其他",
       "level": "Advanced",
       "keywords": [
         "iBeacon",
-        "Raspberry Pi"
+        "Raspberry Pi",
+		"Google Chrome Extensions"
       ]
     }
   ],
