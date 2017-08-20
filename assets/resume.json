@@ -37,9 +37,9 @@
       "company": "國立高雄第一科技大學, 圖書資訊館, 系統支援組",
       "position": "專任助理",
       "website": "",
-      "startDate": "2017/04/24",
+      "startDate": "2017/04",
       "endDate": "",
-      "summary": "主要負責維護智慧校園App以及後台管理，另負責問卷系統開發與校園SSO(OAuth 2)認證服務開發",
+      "summary": "開發與維護智慧校園App以及後台管理，另負責問卷系統開發與校園SSO(OAuth 2)認證服務開發",
       "highlights": []
     },
     {
@@ -136,6 +136,12 @@
     }
   ],
   "publications": [
+	{
+		"name": "國立高雄第一科技大學新生問卷系統",
+		"releaseDate": "2017/08/01",
+		"website": "https://questionnaire.nkfust.edu.tw",
+		"summary": "於第一科大擔任專任助理期間，因接手過去的項目架構不良等問題，使用.Net Core與Angular2重新撰寫"
+	},
 	{
 		"name": "CatchYou藍芽社群交友應用程式",
 		"releaseDate": "2015/12/14",
