@@ -48,6 +48,22 @@
       "highlights": []
     },
     {
+      "company": "嘉南藥理大學",
+      "position": "WPF小遊戲(外包專案)",
+      "startDate": "2016/9",
+      "endDate": "2016/10",
+      "summary": "利用WPF製作小型簡易的大富翁類型遊戲",
+      "highlights": []
+    },
+    {
+      "company": "國立高雄第一科技大學",
+      "position": "RealSense程式設計(外包專案)",
+      "startDate": "2016/07",
+      "endDate": "2016/11",
+      "summary": "實作Intel RealSense臉部識別程式，並解析其SDK內部資料格式，提供RunTime直接編輯資料庫內容",
+      "highlights": []
+    },
+    {
       "company": "國立高雄第一科技大學",
       "position": "創意創新雲端平台",
       "website": "http://goodidea.nkfust.edu.tw",
