@@ -38,12 +38,19 @@
     ]
   },
   "work": [
-	{
+    {
+      "company": "哈瑪星科技股份有限公司, 產品事業部",
+      "position": "工程師",
+      "startDate": "2017/10/11",
+      "endDate": "",
+      "summary": "",
+      "highlights": []
+    },
+    {
       "company": "國立高雄第一科技大學, 圖書資訊館, 系統支援組",
       "position": "專任助理",
-      "website": "",
       "startDate": "2017/04",
-      "endDate": "",
+      "endDate": "2017/09/30",
       "summary": "開發與維護智慧校園App以及後台管理，另負責問卷系統開發與校園SSO(OAuth 2)認證服務開發",
       "highlights": []
     },
