@@ -1,0 +1,22 @@
+<div class="thumbnail userCard">
+  <app-avatar [imageUrl]="profile.basics.picture"></app-avatar>
+  <h3>{{profile.basics.name}}</h3>
+  <p>{{profile.basics.label}}</p>
+  <hr>
+  <div class="userAttr">
+    <div>
+      <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+      <div>{{profile.basics.location.city}}, {{profile.basics.location.countryCode}}</div>
+    </div>
+    <div>
+      <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+      <div>{{profile.basics.email}}</div>      
+    </div>
+    <div>
+      <span><i class="fa fa-language" aria-hidden="true"></i></span>
+      <div>
+        <span *ngFor="let lang of profile.languages;let i = index;">{{i > 0 ? ', ' : ""}}{{lang.language}}</span>
+      </div>
+    </div>
+  </div>
+</div>
