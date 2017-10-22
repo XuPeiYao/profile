@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ResumeService } from '../resume.service';
 
 @Component({
   selector: 'app-user-card',
@@ -8,9 +9,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class UserCardComponent implements OnInit {
   @Input() profile: any;
 
-  constructor() { }
+  constructor(private resumeService: ResumeService) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.profile = await this.resumeService.getResume();
   }
 
 }

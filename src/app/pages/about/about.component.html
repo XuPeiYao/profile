@@ -1,3 +1,15 @@
-<p>
-  about works!
-</p>
+<div div class="thumbnail" *ngIf="profile">
+  <h3 class="title">關於我</h3>
+  <hr>
+  <div>
+    <h4 class="title">自傳</h4>
+    <div class="context" [innerHTML]="profile.basics.summary"></div>
+  </div>
+  <div>
+    <h4 class="title">興趣</h4>
+    <div class="context" *ngFor="let interest of profile.interests">
+      <p><b>{{interest.name}}</b></p>
+      <p><span class="label-keyword" *ngFor="let keyword of interest.keywords">{{keyword}}</span></p>
+    </div>
+  </div>
+</div>

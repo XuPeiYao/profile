@@ -1,4 +1,4 @@
-<div class="thumbnail userCard">
+<div class="thumbnail userCard" *ngIf="profile">
   <app-avatar [imageUrl]="profile.basics.picture"></app-avatar>
   <h3>{{profile.basics.name}}</h3>
   <p>{{profile.basics.label}}</p>
