@@ -16,22 +16,22 @@
         },
         "profiles": [
             {
-                "network": "Facebook",
+                "network": "facebook",
                 "username": "XuPeiYao",
                 "url": "https://www.facebook.com/XuPeiYao"
             },
             {
-                "network": "LinkedIn",
+                "network": "linkedin",
                 "username": "徐培堯",
                 "url": "https://www.linkedin.com/in/xupeiyao"
             },
             {
-                "network": "GitHub",
+                "network": "github",
                 "username": "XuPeiYao",
                 "url": "https://github.com/XuPeiYao"
             },
             {
-                "network": "Blogger",
+                "network": "rss",
                 "username": "XuPeiYao",
                 "url": "https://dotblogs.com.tw/programmingworld"
             }
