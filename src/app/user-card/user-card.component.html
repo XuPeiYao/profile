@@ -3,20 +3,35 @@
   <h3>{{profile.basics.name}}</h3>
   <p>{{profile.basics.label}}</p>
   <hr>
-  <div class="userAttr">
-    <div>
-      <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-      <div>{{profile.basics.location.city}}, {{profile.basics.location.countryCode}}</div>
-    </div>
-    <div>
-      <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
-      <div>{{profile.basics.email}}</div>      
-    </div>
-    <div>
-      <span><i class="fa fa-language" aria-hidden="true"></i></span>
-      <div>
-        <span *ngFor="let lang of profile.languages;let i = index;">{{i > 0 ? ', ' : ""}}{{lang.language}}</span>
+  <div class="container">
+    <div class="userAttr row">
+      <div class="col-sm-4 col-md-12">
+        <span>
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </span>
+        <div>{{profile.basics.location.city}}, {{profile.basics.location.countryCode}}</div>
+      </div>
+      <div class="col-sm-4 col-md-12">
+        <span>
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </span>
+        <div>{{profile.basics.email}}</div>
+      </div>
+      <div class="col-sm-4 col-md-12">
+        <span>
+          <i class="fa fa-language" aria-hidden="true"></i>
+        </span>
+        <div>
+          <span *ngFor="let lang of profile.languages;let i = index;">{{i > 0 ? ', ' : ""}}{{lang.language}}</span>
+        </div>
       </div>
     </div>
   </div>
+  <div class="social">
+    <a class="icon" *ngFor="let social of profile.basics.profiles" [href]="social.url" [title]="social.username">
+      <i class="fa fa-{{social.network}}-square fa-3 {{social.network}}" aria-hidden="true"></i>
+    </a>
+  </div>
+  <hr>
+  <app-menu></app-menu>
 </div>

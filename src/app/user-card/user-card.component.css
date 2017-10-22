@@ -7,14 +7,54 @@
     margin-right: auto;
 }
 .userAttr > div {
-    display: table;
+    /*display: table;*/
     margin-bottom: 10px;
 }
 .userAttr > div > span {
     width: 36px;
 }
-.userAttr > div > span,div {
+.userAttr > div > span,
+.userAttr > div > div {
     display: table-cell;
     vertical-align: middle;
     padding: 0 10px;
+}
+.social > .icon {
+    text-decoration: none;
+    margin: 0 5px;
+}
+.social > .icon > .fa {
+    font-size: 2em;
+}
+
+.facebook {
+    color: #4b6daa;
+}
+.facebook:hover,
+.facebook:focus {
+    color:#3b5687;
+}
+
+.linkedin{
+    color:#007bb6;
+}
+.linkedin:hover,
+.linkedin:focus{
+    color:#005983;
+}
+
+.github{
+    color:#454545;
+}
+.github:hover,
+.github:focus{
+    color:#2b2b2b;
+}
+
+.rss{
+    color:#ff9234;
+}
+.rss:hover,
+.rss:focus{
+    color:#ff7701;
 }
