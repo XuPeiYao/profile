@@ -4,7 +4,13 @@
   <div class="context">
     <div *ngFor="let work of profile.work; let i = index">
       <hr *ngIf="i > 0">
-      <h4><b>{{work.position}}</b> <small>{{work.company}}</small></h4>
+      <h4>
+        <b *ngIf="!work.website">{{work.position}}</b>
+        <a [href]="work.website" target="_blank" *ngIf="work.website?.length > 0">
+          <b>{{work.position}}</b>
+        </a>
+        <small>{{work.company}}</small>
+      </h4>
       <summary>
         <ng-container>
           <small *ngIf="work.endDate.length; else activeWork">自 {{work.startDate}} 至 {{work.endDate}}</small>
