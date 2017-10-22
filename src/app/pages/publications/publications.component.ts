@@ -10,6 +10,7 @@ import { GithubService } from '../../github.service';
 })
 export class PublicationsComponent implements OnInit {
   @Input() profile;
+  loading: boolean;
   constructor(
     private resumeService: ResumeService,
     private githubService: GithubService
@@ -17,6 +18,7 @@ export class PublicationsComponent implements OnInit {
 
   async ngOnInit() {
     this.profile = await this.resumeService.getResume();
+    this.loading = true;
     this.profile.publications = this.profile.publications.map(x => {
         x.releaseDate = new Date(x.releaseDate);
         return x;
@@ -35,5 +37,6 @@ export class PublicationsComponent implements OnInit {
           return b.releaseDate - a.releaseDate;
         })
     );
+    this.loading = false;
   }
 }
