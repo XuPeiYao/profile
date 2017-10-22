@@ -97,7 +97,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "body {\n    font-family: '\\5FAE\\8EDF\\6B63\\9ED1\\9AD4';\n    background: #f0f0f0;\n}\n\n.container {\n    padding-top: 10px;\n}\n\n.title {\n    margin: 15px;\n    font-weight: bold;\n}\n.context {\n    margin: 15px;\n}\n.label-keyword {\n    font-weight: 700;\n    line-height: 1;\n    text-align: center;\n    white-space: nowrap;\n    vertical-align: baseline;\n    border-radius: .25em;\n    display: inline-block;\n    background: #7eb0db;\n    color: white;\n    font-size: 0.9em;\n    padding: 5px;\n    border: 1px solid #357ebd;\n    margin: auto 3px;\n    margin-bottom: 3px;\n}", ""]);
+exports.push([module.i, "body {\r\n    font-family: '\\5FAE\\8EDF\\6B63\\9ED1\\9AD4';\r\n    background: #f0f0f0;\r\n}\r\n\r\n.container {\r\n    padding-top: 10px;\r\n}\r\n\r\n.title {\r\n    margin: 15px;\r\n    font-weight: bold;\r\n}\r\n.context {\r\n    margin: 15px;\r\n}\r\n.label-keyword {\r\n    font-weight: 700;\r\n    line-height: 1;\r\n    text-align: center;\r\n    white-space: nowrap;\r\n    vertical-align: baseline;\r\n    border-radius: .25em;\r\n    display: inline-block;\r\n    background: #7eb0db;\r\n    color: white;\r\n    font-size: 0.9em;\r\n    padding: 5px;\r\n    border: 1px solid #357ebd;\r\n    margin: auto 3px;\r\n    margin-bottom: 3px;\r\n}", ""]);
 
 // exports
 
