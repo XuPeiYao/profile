@@ -13,6 +13,7 @@ import { SkillsComponent } from './pages/skills/skills.component';
 import { EducationComponent } from './pages/education/education.component';
 import { AwardsComponent } from './pages/awards/awards.component';
 import { PublicationsComponent } from './pages/publications/publications.component';
+import { ResumeService } from './resume.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { PublicationsComponent } from './pages/publications/publications.compone
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    ResumeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
