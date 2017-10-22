@@ -180,7 +180,7 @@
     "skills": [
         {
             "name": "Internet應用程式後端開發",
-            "level": "Master",
+            "level": 4,
             "keywords": [
                 "ASP.net MVC(Core & 4.X)",
                 "Web API",
@@ -198,7 +198,7 @@
         },
         {
             "name": "Internet應用程式前端開發",
-            "level": "Advanced",
+            "level": 3,
             "keywords": [
                 "Typescript",
                 "Javascript",
@@ -209,7 +209,7 @@
         },
         {
             "name": "Windows應用程式開發",
-            "level": "Advanced",
+            "level": 3,
             "keywords": [
                 "Windows Form",
                 "WPF"
@@ -217,7 +217,7 @@
         },
         {
             "name": "其他",
-            "level": "Advanced",
+            "level": 3,
             "keywords": [
                 "iBeacon",
                 "Raspberry Pi",

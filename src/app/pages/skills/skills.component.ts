@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ResumeService } from '../../resume.service';
 
 @Component({
   selector: 'app-skills',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
+  @Input() profile;
+  constructor(private resumeService: ResumeService) { }
 
-  constructor() { }
-
-  ngOnInit() {
+  async ngOnInit() {
+    this.profile = await this.resumeService.getResume();
   }
-
 }

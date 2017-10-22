@@ -14,6 +14,7 @@ import { EducationComponent } from './pages/education/education.component';
 import { AwardsComponent } from './pages/awards/awards.component';
 import { PublicationsComponent } from './pages/publications/publications.component';
 import { ResumeService } from './resume.service';
+import { TimesPipe } from './times.pipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ResumeService } from './resume.service';
     EducationComponent,
     AwardsComponent,
     PublicationsComponent,
+    TimesPipe,
   ],
   imports: [
     BrowserModule,

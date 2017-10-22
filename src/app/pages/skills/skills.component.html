@@ -1,3 +1,19 @@
-<p>
-  skills works!
-</p>
+<div div class="thumbnail" *ngIf="profile">
+  <h3 class="title">技能</h3>
+  <hr>
+  <div class="context">
+    <div *ngFor="let skill of profile.skills; let i = index">
+      <hr *ngIf="i > 0">
+      <h4><b>{{skill.name}}</b></h4>
+      <summary>
+        <h5>
+          <span class="starBar" *ngFor="let index of 5|times">
+            <i *ngIf="index <= skill.level" class="fa fa-star" aria-hidden="true"></i>
+            <i *ngIf="index > skill.level" class="fa fa-star star-o" aria-hidden="true"></i>
+          </span>
+        </h5>
+        <p><span class="label-keyword" *ngFor="let keyword of skill.keywords">{{keyword}}</span></p>
+      </summary>
+    </div>
+  </div>
+</div>
