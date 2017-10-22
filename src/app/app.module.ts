@@ -15,6 +15,7 @@ import { AwardsComponent } from './pages/awards/awards.component';
 import { PublicationsComponent } from './pages/publications/publications.component';
 import { ResumeService } from './resume.service';
 import { TimesPipe } from './times.pipe';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { TimesPipe } from './times.pipe';
     EducationComponent,
     AwardsComponent,
     PublicationsComponent,
-    TimesPipe,
+    TimesPipe
   ],
   imports: [
     BrowserModule,

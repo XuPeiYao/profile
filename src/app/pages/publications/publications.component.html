@@ -1,3 +1,19 @@
-<p>
-  publications works!
-</p>
+<div div class="thumbnail" *ngIf="profile">
+  <h3 class="title">作品</h3>
+  <hr>
+  <div class="context">
+    <div *ngFor="let pub of profile.publications; let i = index">
+      <hr *ngIf="i > 0">
+      <h4>
+        <b *ngIf="!pub.website">{{pub.name}}</b>
+        <a [href]="pub.website" target="_blank" *ngIf="pub.website?.length > 0">
+          <b>{{pub.name}}</b>
+        </a>
+      </h4>
+      <summary>
+        <small><label>發行日:</label> {{pub.releaseDate|date:'yyyy/MM/dd'}}</small>
+        <p>{{pub.summary}}</p>
+      </summary>
+    </div>
+  </div>
+</div>
