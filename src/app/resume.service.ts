@@ -31,6 +31,7 @@ export class ResumeService {
             item(x);
           }
           this.queue = [];
+          this.locked = false; // 解除鎖定
         });
     });
   }
