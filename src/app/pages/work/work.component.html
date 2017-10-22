@@ -1,3 +1,19 @@
-<p>
-  work works!
-</p>
+<div div class="thumbnail" *ngIf="profile">
+  <h3 class="title">工作經歷</h3>
+  <hr>
+  <div class="context">
+    <div *ngFor="let work of profile.work; let i = index">
+      <hr *ngIf="i > 0">
+      <h4><b>{{work.position}}</b> <small>{{work.company}}</small></h4>
+      <summary>
+        <ng-container>
+          <small *ngIf="work.endDate.length; else activeWork">自 {{work.startDate}} 至 {{work.endDate}}</small>
+          <ng-template #activeWork>
+            <small>自 {{work.startDate}} 至今</small>
+          </ng-template>
+        </ng-container>
+        <p>{{work.summary}}</p>
+      </summary>
+    </div>
+  </div>
+</div>
