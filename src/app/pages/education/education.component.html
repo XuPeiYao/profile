@@ -1,3 +1,20 @@
-<p>
-  education works!
-</p>
+<div div class="thumbnail" *ngIf="profile">
+    <h3 class="title">學歷</h3>
+    <hr>
+    <div class="context">
+      <div *ngFor="let edu of profile.education; let i = index">
+        <hr *ngIf="i > 0">
+        <h4><b>{{edu.area}}</b> <small>{{edu.studyType}}, {{edu.institution}}</small></h4>
+        <summary>
+          <ng-container>
+            <small *ngIf="edu.endDate.length; else activeWork">自 {{edu.startDate}} 至 {{edu.endDate}}</small>
+            <ng-template #activeWork>
+              <small>自 {{edu.startDate}} 至今</small>
+            </ng-template>
+          </ng-container>
+          <p *ngIf="edu.gpa?.length"><label>GPA:</label> {{edu.gpa}}</p>
+          <p><span class="label-keyword" *ngFor="let course of edu.courses">{{course}}</span></p>
+        </summary>
+      </div>
+    </div>
+  </div>
