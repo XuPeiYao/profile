@@ -1,3 +1,14 @@
-<p>
-  awards works!
-</p>
+<div div class="thumbnail" *ngIf="profile">
+  <h3 class="title">工作經歷</h3>
+  <hr>
+  <div class="context">
+    <div *ngFor="let award of profile.awards; let i = index">
+      <hr *ngIf="i > 0">
+      <h4><b>{{award.title}}</b><small>{{award.awarder}}</small></h4>
+      <summary>
+        <small><label>獲獎日期:</label> {{award.date}}</small>
+        <p *ngIf="award.summary?.length">{{award.summary}}</p>
+      </summary>
+    </div>
+  </div>
+</div>
