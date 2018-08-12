@@ -1,257 +1,253 @@
 {
-    "basics": {
-        "name": "徐培堯",
-        "label": "Programmer",
-        "picture": "https://i.imgur.com/gssYPrW.jpg",
-        "email": "st89382000@gmail.com",
-        "phone": "",
-        "website": "",
-        "summary": "從小就對電腦感到興趣，喜歡自行摸索與研究電腦，個性友善、積極，對於工作上的要求會力求完美，將事情做到最好是必須的，同時在每一次的工作中自我精進，不斷地增進自己的專業知識與熟練程度。<br/>因為興趣使我選擇就讀國立高雄第一科技大學資訊管理系，修習時以程式設計、資料庫管理為主軸，並著重於實作方面，我的專長在於網站後端實作與資料庫設計、系統分析，我以成為專業程式設計師為目標。在學期間參與許多的程式設計相關競賽並且獲得許多佳績，除此，我也利用課餘時間對新興的技術加以研究、學習，如: .NET Core、ASP.NET Core、Node.js...等。<br/>實務經驗方面，在學期間獲教授推薦，協助學校開發通識課程所需之創意創新雲端平台，提供線上編輯多媒體文件與投稿、舉辦競賽等功能，在專案從無到有的過程學習到許多過去專案不曾遇到的問題，同時也學習到理解客戶需求，並將客戶的需求轉換為所需的程式。除此之外也在外自行接案，並且成功的在期限內完成交付，滿足客戶的需要。<br/>經過接案與專題，使我在客戶溝通、多人協作、系統分析上實際的經驗，在開發過程中遇到困難時，習慣先自在網路上尋找解決方案，如：stackoverflow等平台，此前的開發經驗讓我有自信能夠解決遇到的問題。<br/>每段程式，光是能執行是不夠的，需要考慮的效率、可讀性、可維護性，依然有一段路要走，不管如何必須時刻學習，讓自己的技術更加精進。<br/>程式設計不僅是我的興趣，更是想作為我的志業!",
-        "location": {
-            "address": "",
-            "postalCode": "",
-            "city": "高雄市",
-            "countryCode": "台灣",
-            "region": ""
-        },
-        "profiles": [
-            {
-                "network": "facebook",
-                "username": "XuPeiYao",
-                "url": "https://www.facebook.com/XuPeiYao"
-            },
-            {
-                "network": "linkedin",
-                "username": "徐培堯",
-                "url": "https://www.linkedin.com/in/xupeiyao"
-            },
-            {
-                "network": "github",
-                "username": "XuPeiYao",
-                "url": "https://github.com/XuPeiYao"
-            },
-            {
-                "network": "rss",
-                "username": "XuPeiYao",
-                "url": "https://dotblogs.com.tw/programmingworld"
-            }
-        ]
+  "basics": {
+    "name": "徐培堯",
+    "label": "Programmer",
+    "picture": "https://i.imgur.com/gssYPrW.jpg",
+    "email": "st89382000@gmail.com",
+    "phone": "",
+    "website": "",
+    "summary": "喜歡自行摸索與研究電腦，個性友善、積極，對於工作上的要求會力求完美，在每一次的工作中自我精進，不斷地增進自己的專業知識與熟練程度。<br/>因興趣使然就讀資訊管理系，修習時以程式設計、資料庫管理為主軸，並著重於實作方面，我的專長在於網站後端實作與資料庫設計、系統分析，以成為專業程式設計師為目標。在學期間參與許多的程式設計相關競賽並且獲得許多佳績，此外也利用閒暇精進自己的技術。<br/>實務經驗方面，在學期間獲教授推薦，協助學校開發通識課程所需之平台，提供通識課程使用，在專案從無到有的過程學習到許多過去個人專案不會遇到的問題。除此之外也在自行接案，並且成功的在期限內完成交付，滿足客戶的需要。<br/>經過接案與專題，使我在溝通、協作、系統分析上有實際的經驗，在開發過程中遇到困難時，習慣先自在網路上尋找解決方案，如：stackoverflow等平台，此前的開發經驗讓我有自信能夠自行解決遇到的問題。<br/>除了精進原有的技術外，平時也在github與其他專業社群關注最新的技術發展，也與工作上的同事進行討論學習，如Jenkins、docker等……",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "高雄市",
+      "countryCode": "台灣",
+      "region": ""
     },
-    "work": [
-        {
-            "company": "哈瑪星科技股份有限公司, 產品事業部",
-            "position": "工程師",
-            "startDate": "2017/10/11",
-            "endDate": "",
-            "summary": "",
-            "highlights": []
-        },
-        {
-            "company": "國立高雄第一科技大學, 圖書資訊館, 系統支援組",
-            "position": "專任助理",
-            "startDate": "2017/04",
-            "endDate": "2017/09/30",
-            "summary": "開發與維護智慧校園App以及後台管理，另負責問卷系統開發與校園SSO(OAuth 2)認證服務開發",
-            "highlights": []
-        },
-        {
-            "company": "嘉南藥理大學",
-            "position": "WPF小遊戲(外包專案)",
-            "startDate": "2016/9",
-            "endDate": "2016/10",
-            "summary": "利用WPF製作小型簡易的大富翁類型遊戲",
-            "highlights": []
-        },
-        {
-            "company": "國立高雄第一科技大學",
-            "position": "RealSense程式設計(外包專案)",
-            "startDate": "2016/07",
-            "endDate": "2016/11",
-            "summary": "實作Intel RealSense臉部識別程式，並解析其SDK內部資料格式，提供RunTime直接編輯資料庫內容",
-            "highlights": []
-        },
-        {
-            "company": "國立高雄第一科技大學",
-            "position": "創意創新雲端平台",
-            "website": "http://goodidea.nkfust.edu.tw",
-            "startDate": "2015/02",
-            "endDate": "2016/07",
-            "summary": "依校方需求規劃設計系統並建置、維護",
-            "highlights": []
-        },
-        {
-            "company": "順發電腦股份有限公司",
-            "position": "實習",
-            "website": "",
-            "startDate": "2014/09",
-            "endDate": "2015/01",
-            "summary": "有關iBeacon應用程式後端實作",
-            "highlights": []
-        }
-    ],
-    "volunteer": [],
-    "education": [
-        {
-            "institution": "國立高雄第一科技大學",
-            "area": "資訊管理系",
-            "studyType": "大學部",
-            "startDate": "2012/09",
-            "endDate": "2016/06",
-            "gpa": "A",
-            "courses": [
-                "JAVA程式設計",
-                "C#程式設計",
-                "網頁程式設計",
-                "資料庫管理",
-                "XML",
-                "UNIX系統",
-                "資訊安全",
-                "人工智慧"
-            ]
-        },
-        {
-            "institution": "國立曾文高級家事商業職業學校",
-            "area": "資料處理科",
-            "studyType": "日間部",
-            "startDate": "2009/09",
-            "endDate": "2012/06",
-            "gpa": "",
-            "courses": []
-        }
-    ],
-    "awards": [
-        {
-            "title": "2015年高雄學園四校資管系聯合專題實務競賽暨成果展",
-            "date": "2015/12/11",
-            "awarder": "行動應用組優勝",
-            "summary": "本小組主題為匿名交友軟體"
-        },
-        {
-            "title": "103學年度校內程式設計競賽",
-            "date": "2014/12",
-            "awarder": "第三名",
-            "summary": ""
-        },
-        {
-            "title": "102學年度校內程式設計競賽",
-            "date": "2013/12",
-            "awarder": "第一名",
-            "summary": ""
-        },
-        {
-            "title": "第一科大杯Apps競賽",
-            "date": "2013/04",
-            "awarder": "創意構想組第三名",
-            "summary": ""
-        },
-        {
-            "title": "101學年度校內程式設計競賽",
-            "date": "2012/12",
-            "awarder": "佳作",
-            "summary": ""
-        },
-        {
-            "title": "100學年度全國商業類科技藝競賽",
-            "date": "2011/12",
-            "awarder": "程式設計組第五名",
-            "summary": ""
-        },
-        {
-            "title": "99年資訊月資訊應用競賽",
-            "date": "2010/11",
-            "awarder": "南區團體組第三名、個人組第三名",
-            "summary": ""
-        }
-    ],
-    "publications": [
-        {
-            "name": "國立高雄第一科技大學新生問卷系統",
-            "releaseDate": "2017/08/01",
-            "website": "https://questionnaire.nkfust.edu.tw",
-            "summary": "於第一科大擔任專任助理期間，因接手過去的項目架構不良等問題，使用.Net Core與Angular2重新撰寫"
-        },
-        {
-            "name": "CatchYou藍芽社群交友應用程式",
-            "releaseDate": "2015/12/14",
-            "website": "http://www.mis.nkfust.edu.tw/monograph/upload/doc/1040027.pdf",
-            "summary": "大學專題作品，使用ASP.net Core開發並應用Web API與WebSocket等技術實作"
-        }
-    ],
-    "skills": [
-        {
-            "name": "Internet應用程式後端開發",
-            "level": 4,
-            "keywords": [
-                "ASP.net MVC(Core & 4.X)",
-                "Web API",
-                "SQL Server",
-                "Mongo DB",
-                "T-SQL",
-                "LINQ",
-                "EntityFramework(Core & 6.X)",
-                "Node.js",
-                "OAuth2",
-                "Navicat",
-                "資料庫設計",
-                "系統分析與設計"
-            ]
-        },
-        {
-            "name": "Internet應用程式前端開發",
-            "level": 3,
-            "keywords": [
-                "Typescript",
-                "Javascript",
-                "Angular2",
-                "AngularJS",
-                "HTML5"
-            ]
-        },
-        {
-            "name": "Windows應用程式開發",
-            "level": 3,
-            "keywords": [
-                "Windows Form",
-                "WPF"
-            ]
-        },
-        {
-            "name": "其他",
-            "level": 3,
-            "keywords": [
-                "iBeacon",
-                "Raspberry Pi",
-                "Google Chrome Extensions",
-                "xUnit"
-            ]
-        }
-    ],
-    "languages": [
-        {
-            "language": "中文",
-            "fluency": "母語"
-        },
-        {
-            "language": "英文",
-            "fluency": "略懂"
-        }
-    ],
-    "interests": [
-        {
-            "name": "電影",
-            "keywords": [
-                "科幻",
-                "懸疑"
-            ]
-        },
-        {
-            "name": "小說",
-            "keywords": [
-                "科幻",
-                "偵探",
-                "歷史"
-            ]
-        }
-    ],
-    "references": []
+    "profiles": [{
+        "network": "facebook",
+        "username": "XuPeiYao",
+        "url": "https://www.facebook.com/XuPeiYao"
+      },
+      {
+        "network": "linkedin",
+        "username": "徐培堯",
+        "url": "https://www.linkedin.com/in/xupeiyao"
+      },
+      {
+        "network": "github",
+        "username": "XuPeiYao",
+        "url": "https://github.com/XuPeiYao"
+      },
+      {
+        "network": "rss",
+        "username": "XuPeiYao",
+        "url": "https://dotblogs.com.tw/programmingworld"
+      }
+    ]
+  },
+  "work": [{
+      "company": "哈瑪星科技股份有限公司, 產品事業部",
+      "position": "工程師",
+      "startDate": "2017/10/11",
+      "endDate": "",
+      "summary": "規劃多功能平台資料庫以及後端架構的實作，並以此開發富邦影城、書城平台",
+      "highlights": []
+    },
+    {
+      "company": "國立高雄第一科技大學, 圖書資訊館, 系統支援組",
+      "position": "專任助理",
+      "startDate": "2017/04",
+      "endDate": "2017/09/30",
+      "summary": "開發與維護智慧校園App以及後台管理，另負責問卷系統開發與校園SSO(OAuth 2)認證服務開發",
+      "highlights": []
+    },
+    {
+      "company": "嘉南藥理大學",
+      "position": "WPF小遊戲(外包專案)",
+      "startDate": "2016/9",
+      "endDate": "2016/10",
+      "summary": "利用WPF製作小型簡易的大富翁類型遊戲",
+      "highlights": []
+    },
+    {
+      "company": "國立高雄第一科技大學",
+      "position": "RealSense程式設計(外包專案)",
+      "startDate": "2016/07",
+      "endDate": "2016/11",
+      "summary": "實作Intel RealSense臉部識別程式，並解析其SDK內部資料格式，提供RunTime直接編輯資料庫內容",
+      "highlights": []
+    },
+    {
+      "company": "國立高雄第一科技大學",
+      "position": "創意創新雲端平台",
+      "website": "http://goodidea.nkfust.edu.tw",
+      "startDate": "2015/02",
+      "endDate": "2016/07",
+      "summary": "依校方需求規劃設計系統並建置、維護",
+      "highlights": []
+    },
+    {
+      "company": "順發電腦股份有限公司",
+      "position": "實習",
+      "website": "",
+      "startDate": "2014/09",
+      "endDate": "2015/01",
+      "summary": "有關iBeacon應用程式後端實作",
+      "highlights": []
+    }
+  ],
+  "volunteer": [],
+  "education": [{
+      "institution": "國立高雄第一科技大學",
+      "area": "資訊管理系",
+      "studyType": "大學部",
+      "startDate": "2012/09",
+      "endDate": "2016/06",
+      "gpa": "A",
+      "courses": [
+        "JAVA程式設計",
+        "C#程式設計",
+        "網頁程式設計",
+        "資料庫管理",
+        "XML",
+        "UNIX系統",
+        "資訊安全",
+        "人工智慧"
+      ]
+    },
+    {
+      "institution": "國立曾文高級家事商業職業學校",
+      "area": "資料處理科",
+      "studyType": "日間部",
+      "startDate": "2009/09",
+      "endDate": "2012/06",
+      "gpa": "",
+      "courses": []
+    }
+  ],
+  "awards": [{
+      "title": "2015年高雄學園四校資管系聯合專題實務競賽暨成果展",
+      "date": "2015/12/11",
+      "awarder": "行動應用組優勝",
+      "summary": "本小組主題為匿名交友軟體"
+    },
+    {
+      "title": "103學年度校內程式設計競賽",
+      "date": "2014/12",
+      "awarder": "第三名",
+      "summary": ""
+    },
+    {
+      "title": "102學年度校內程式設計競賽",
+      "date": "2013/12",
+      "awarder": "第一名",
+      "summary": ""
+    },
+    {
+      "title": "第一科大杯Apps競賽",
+      "date": "2013/04",
+      "awarder": "創意構想組第三名",
+      "summary": ""
+    },
+    {
+      "title": "101學年度校內程式設計競賽",
+      "date": "2012/12",
+      "awarder": "佳作",
+      "summary": ""
+    },
+    {
+      "title": "100學年度全國商業類科技藝競賽",
+      "date": "2011/12",
+      "awarder": "程式設計組第五名",
+      "summary": ""
+    },
+    {
+      "title": "99年資訊月資訊應用競賽",
+      "date": "2010/11",
+      "awarder": "南區團體組第三名、個人組第三名",
+      "summary": ""
+    }
+  ],
+  "publications": [{
+      "name": "國立高雄第一科技大學新生問卷系統",
+      "releaseDate": "2017/08/01",
+      "website": "https://questionnaire.nkfust.edu.tw",
+      "summary": "於第一科大擔任專任助理期間，因接手過去的項目架構不良等問題，使用.Net Core與Angular2重新撰寫"
+    },
+    {
+      "name": "CatchYou藍芽社群交友應用程式",
+      "releaseDate": "2015/12/14",
+      "website": "http://www.mis.nkfust.edu.tw/monograph/upload/doc/1040027.pdf",
+      "summary": "大學專題作品，使用ASP.net Core開發並應用Web API與WebSocket等技術實作"
+    }
+  ],
+  "skills": [{
+      "name": "Internet應用程式後端開發",
+      "level": 4,
+      "keywords": [
+        "ASP.net MVC Core",
+        "Web API",
+        "SQL Server",
+        "Mongo DB",
+        "PostgreSQL",
+        "T-SQL",
+        "Linq",
+        "EntityFramework Core",
+        "Node.js",
+        "Line Message API(Bot)",
+        "OAuth2",
+        "JWT",
+        "Navicat",
+        "資料庫設計",
+        "系統分析與設計"
+      ]
+    },
+    {
+      "name": "Internet應用程式前端開發",
+      "level": 3,
+      "keywords": [
+        "TypeScript",
+        "JavaScript",
+        "Angular2+",
+        "AngularJS",
+        "HTML5"
+      ]
+    },
+    {
+      "name": "Windows應用程式開發",
+      "level": 3,
+      "keywords": [
+        "Windows Form",
+        "WPF",
+        "electron.js"
+      ]
+    },
+    {
+      "name": "其他",
+      "level": 3,
+      "keywords": [
+        "iBeacon",
+        "Raspberry Pi",
+        "Google Chrome Extensions",
+        "xUnit"
+      ]
+    }
+  ],
+  "languages": [{
+      "language": "中文",
+      "fluency": "母語"
+    },
+    {
+      "language": "英文",
+      "fluency": "略懂"
+    }
+  ],
+  "interests": [{
+      "name": "電影",
+      "keywords": [
+        "科幻",
+        "懸疑"
+      ]
+    },
+    {
+      "name": "小說",
+      "keywords": [
+        "科幻",
+        "偵探",
+        "歷史"
+      ]
+    }
+  ],
+  "references": []
 }

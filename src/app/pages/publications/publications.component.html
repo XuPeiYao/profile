@@ -1,23 +1,28 @@
 <div div class="thumbnail" *ngIf="profile">
-  <h3 class="title"><i class="fa fa-book" aria-hidden="true"></i> 作品</h3>
+  <h3 class="title">
+    <i class="fa fa-book" aria-hidden="true"></i> 作品</h3>
   <hr>
   <div class="context">
-    <div *ngFor="let pub of profile.publications; let i = index">
-      <hr *ngIf="i > 0">
-      <h4>
-        <b *ngIf="!pub.website">{{pub.name}}</b>
-        <a [href]="pub.website" target="_blank" *ngIf="pub.website?.length > 0">
-          <b>{{pub.name}}</b>
-        </a>
-      </h4>
-      <summary>
-        <small><label>發行日:</label> {{pub.releaseDate|date:'yyyy/MM/dd'}}</small>
-        <p>{{pub.summary}}</p>
-      </summary>
-    </div>
+    <ng-container *ngIf="!loading">
+      <div *ngFor="let pub of profile.publications; let i = index">
+        <hr *ngIf="i > 0">
+        <h4>
+          <b *ngIf="!pub.website">{{pub.name}}</b>
+          <a [href]="pub.website" target="_blank" *ngIf="pub.website?.length > 0">
+            <b>{{pub.name}}</b>
+          </a>
+        </h4>
+        <summary>
+          <small>
+            <label>發行日:</label> {{pub.releaseDate|date:'yyyy/MM/dd'}}</small>
+          <p>{{pub.summary}}</p>
+        </summary>
+      </div>
+    </ng-container>
     <div *ngIf="loading">
       <div class="progress">
-        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
+          style="width: 100%">
           載入中...
         </div>
       </div>
