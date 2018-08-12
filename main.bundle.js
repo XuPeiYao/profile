@@ -846,7 +846,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/publications/publications.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div div class=\"thumbnail\" *ngIf=\"profile\">\r\n  <h3 class=\"title\"><i class=\"fa fa-book\" aria-hidden=\"true\"></i> 作品</h3>\r\n  <hr>\r\n  <div class=\"context\">\r\n    <div *ngFor=\"let pub of profile.publications; let i = index\">\r\n      <hr *ngIf=\"i > 0\">\r\n      <h4>\r\n        <b *ngIf=\"!pub.website\">{{pub.name}}</b>\r\n        <a [href]=\"pub.website\" target=\"_blank\" *ngIf=\"pub.website?.length > 0\">\r\n          <b>{{pub.name}}</b>\r\n        </a>\r\n      </h4>\r\n      <summary>\r\n        <small><label>發行日:</label> {{pub.releaseDate|date:'yyyy/MM/dd'}}</small>\r\n        <p>{{pub.summary}}</p>\r\n      </summary>\r\n    </div>\r\n    <div *ngIf=\"loading\">\r\n      <div class=\"progress\">\r\n        <div class=\"progress-bar progress-bar-striped active\" role=\"progressbar\" aria-valuenow=\"100\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 100%\">\r\n          載入中...\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<div div class=\"thumbnail\" *ngIf=\"profile\">\r\n  <h3 class=\"title\">\r\n    <i class=\"fa fa-book\" aria-hidden=\"true\"></i> 作品</h3>\r\n  <hr>\r\n  <div class=\"context\">\r\n    <ng-container *ngIf=\"!loading\">\r\n      <div *ngFor=\"let pub of profile.publications; let i = index\">\r\n        <hr *ngIf=\"i > 0\">\r\n        <h4>\r\n          <b *ngIf=\"!pub.website\">{{pub.name}}</b>\r\n          <a [href]=\"pub.website\" target=\"_blank\" *ngIf=\"pub.website?.length > 0\">\r\n            <b>{{pub.name}}</b>\r\n          </a>\r\n        </h4>\r\n        <summary>\r\n          <small>\r\n            <label>發行日:</label> {{pub.releaseDate|date:'yyyy/MM/dd'}}</small>\r\n          <p>{{pub.summary}}</p>\r\n        </summary>\r\n      </div>\r\n    </ng-container>\r\n    <div *ngIf=\"loading\">\r\n      <div class=\"progress\">\r\n        <div class=\"progress-bar progress-bar-striped active\" role=\"progressbar\" aria-valuenow=\"100\" aria-valuemin=\"0\" aria-valuemax=\"100\"\r\n          style=\"width: 100%\">\r\n          載入中...\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -912,23 +912,20 @@ var PublicationsComponent = (function () {
     }
     PublicationsComponent.prototype.ngOnInit = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _a, _b, _c, _d;
-            return __generator(this, function (_e) {
-                switch (_e.label) {
+            var _a, _b;
+            return __generator(this, function (_c) {
+                switch (_c.label) {
                     case 0:
                         _a = this;
                         return [4 /*yield*/, this.resumeService.getResume()];
                     case 1:
-                        _a.profile = _e.sent();
+                        _a.profile = _c.sent();
                         this.loading = true;
                         _b = this.profile;
-                        _d = (_c = this.profile.publications.map(function (x) {
-                            x.releaseDate = new Date(x.releaseDate);
-                            return x;
-                        })).concat;
                         return [4 /*yield*/, this.githubService.getAllRepos()];
                     case 2:
-                        _b.publications = _d.apply(_c, [(_e.sent())
+                        _b.publications =
+                            (_c.sent())
                                 .filter(function (x) { return x.stargazers_count; })
                                 .map(function (x) {
                                 return {
@@ -940,7 +937,10 @@ var PublicationsComponent = (function () {
                             })
                                 .sort(function (a, b) {
                                 return b.releaseDate - a.releaseDate;
-                            })]);
+                            }).concat(this.profile.publications.map(function (x) {
+                                x.releaseDate = new Date(x.releaseDate);
+                                return x;
+                            }));
                         this.loading = false;
                         return [2 /*return*/];
                 }
