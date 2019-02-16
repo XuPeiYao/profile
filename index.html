@@ -18,7 +18,11 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-85462692-1');
+    gtag('config', 'UA-85462692-1', {
+    'custom_map': {'dimension1': 'School'}
+  }); 
+  // Sends the custom dimension to Google Analytics.
+  gtag('event', 'S', {'School': '測試學校'});
   </script>
 
 <script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="scripts.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
